@@ -1,0 +1,1643 @@
+/*Toolbar color*/
+
+.toolbar {
+  background-color: #484848;
+  color: #ffffff;
+}
+
+.toolbar__center {
+  color: #fff;
+}
+
+.toolbar-button {
+  color: #fff;
+}
+
+.back-button {
+  color: #fff;
+}
+
+.toolbar-right-icon {
+  padding-right: 5%;
+}
+
+#login-page .page__background,
+#terms-page .page__background {
+  background-image: url("../img/background-01.png");
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+#login-page img {
+  display: block;
+  margin: 3% auto;
+  min-width: 40%;
+  min-height: 30%;
+  max-width: 80%;
+  max-height: 80%
+}
+
+#login-page input {
+  display: block;
+  margin: 2% auto;
+  min-width: 45%;
+  max-width: 70%;
+  /*  padding-left: 30px;*/
+  text-align: center;
+  color: #ffffff;
+}
+
+#login-page .checkbox {
+  margin-left: 20%
+}
+
+#login-page {
+  text-align: center
+}
+
+#login-page label {
+  /*  display: block;*/
+  text-align: center;
+  color: #ffffff;
+}
+
+#versionNumber {
+  font-size: 14px;
+  margin: 10% 0 0 80%;
+}
+
+#loginBtn {
+  /*  background-color: #8CC63E;*/
+  border-color: #ffdd00;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 10px;
+  color: #ffdd00;
+}
+
+#register-button {
+  border-color: #ffdd00;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 10px;
+  color: #ffdd00;
+}
+
+
+/*Side Menu*/
+
+#menu-page .page__background {
+  background-color: #000000;
+  opacity: 0.7
+}
+
+.welcome {
+  background-image: url("../img/background-01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 40px;
+}
+
+.welcome label {
+  margin: 10%
+}
+
+#menu .list {
+  background-color: transparent;
+}
+
+#menu .list-item {
+  color: #ffffff;
+}
+
+
+/*Register page*/
+
+
+/*#register-page select {
+  min-width: 10%;
+  max-width: 95%;
+}*/
+
+#register-page h4 {
+  color: #000;
+  background-color: #ffdd00;
+  padding: 2% 5%;
+  display: block;
+  margin: 0;
+}
+
+#personalDetWrapper {
+  display: block;
+  max-width: 98%;
+  margin: 2% auto;
+}
+
+#personalDetWrapper p {
+  margin-left: 3%;
+  font-size: 12px
+}
+
+#personalDetWrapper select {
+  margin-left: 3%;
+  font-size: 12px;
+  min-width: 10%;
+  max-width: 40%;
+}
+
+#personalDetWrapper input {
+  margin-left: 3%;
+  font-size: 14px;
+}
+
+#personalDetWrapper #regName {
+  display: block;
+  border: 1px solid #D3CFCF;
+  padding-bottom: 2%;
+  margin: 2% 0;
+}
+
+#personalDetWrapper #regPwd {
+  display: block;
+  border: 1px solid #D3CFCF;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+
+#personalDetWrapper #regAddress {
+  display: block;
+  border: 1px solid #D3CFCF;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+
+#personalDetWrapper #regEmail {
+  display: block;
+  border: 1px solid #D3CFCF;
+  padding-bottom: 2%;
+}
+
+#personalDetWrapper #nationality {
+  display: block;
+  border: 1px solid #D3CFCF;
+  margin-bottom: 2%;
+  padding: 1% 0;
+}
+
+#personalDetWrapper #nationality label[id="lblNationality"] {
+  font-size: 14px;
+  padding: 0 0 0 3%;
+}
+
+#personalDetWrapper #nationality label[class="left"] {
+  padding: 0 0 0 5%;
+}
+
+#personalDetWrapper #birthdayWrapper {
+  display: inline-block;
+  border: 1px solid #D3CFCF;
+  width: 42%;
+  padding: 0 0 4% 0;
+  /*  margin: 2% 0;*/
+}
+
+#personalDetWrapper #stateWrapper {
+  display: inline-block;
+  border: 1px solid #D3CFCF;
+  width: 49%;
+  padding: 0 0 4.2% 0;
+  /*  margin-bottom: 2%;*/
+}
+
+#personalDetWrapper #stateWrapper select {
+  font-size: 12px;
+  min-width: 90%;
+}
+
+#personalDetWrapper #postcodeWrapper {
+  display: inline-block;
+  border: 1px solid #D3CFCF;
+  width: 49%;
+  padding: 0 0 4.2% 0;
+  /*  margin-bottom: 2%;*/
+}
+
+#personalDetWrapper #postcodeWrapper select {
+  font-size: 12px;
+  min-width: 90%;
+}
+
+#personalDetWrapper #nricPassport {
+  display: inline-block;
+  border: 1px solid #D3CFCF;
+  max-width: 42.5%;
+  padding: 0 0 4.2% 0;
+}
+
+#personalDetWrapper #nric {
+  max-width: 90%;
+}
+
+
+/*#personalDetWrapper #birthday {
+  max-width: 90%;
+}*/
+
+#personalDetWrapper #regMobile {
+  display: inline-block;
+  border: 1px solid #D3CFCF;
+  max-width: 56%;
+  /*  margin-left: 2.5%;*/
+  padding: 0 0 2% 0;
+  margin: 2% 0;
+}
+
+#personalDetWrapper #hpRegion {
+  max-width: 20%;
+  text-align: center
+}
+
+#personalDetWrapper #hpNo {
+  max-width: 50%
+}
+
+#personalDetWrapper label[for="radio-1"] {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 0 0 5%;
+}
+
+#personalDetWrapper label[for="radio-2"] {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 0 0 5%;
+}
+
+#regTable {
+  width: 99%;
+  table-layout: fixed;
+  margin-left: 0.5%
+}
+
+#regTable th {
+  background-color: #ffdd00;
+  height: 30px;
+  color: #000;
+}
+
+#regTable td {
+  border: 1px solid #D3CFCF;
+  vertical-align: middle;
+  height: 50px;
+  width: 50%
+}
+
+#regTable select {
+  font-size: 14px;
+  width: 95%;
+}
+
+#regTable label {
+  display: block
+}
+
+#regTable #regVehPlate {
+  max-width: 70%
+}
+
+#regTable .btnDef {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 30%;
+  color: #3E79C6;
+  border: 1px solid #4385D6;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+#regBtn {
+  background-color: #ffdd00;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+}
+
+#regCompleteBtn {
+  background-color: #ffdd00;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+}
+
+
+/**/
+
+
+/*Reset Password*/
+
+#resetPasswordWrapper {
+  width: 90%;
+  margin: 5% auto;
+}
+
+#resetPassword-page #resetPasswordWrapper input {
+  display: block;
+  color: #fff;
+  width: 80%;
+  margin: 5% 0;
+}
+
+#checkEmail {
+  outline: none;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #ffdd00;
+  color: #000;
+  font-size: 12px;
+  min-width: 30%;
+  max-width: 40%;
+  margin: 2% 0;
+}
+
+#resetPasswordWrapper #resetIcWrapper {
+  visibility: hidden;
+  margin: 4% 0;
+}
+
+#resetPasswordWrapper #checkIc {
+  outline: none;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #ffdd00;
+  color: #000;
+  font-size: 12px;
+  min-width: 30%;
+  max-width: 40%;
+  margin: 2% 0;
+}
+
+#resetPasswordWrapper #resetPwdWrapper {
+  visibility: hidden;
+  margin: 4% 0;
+}
+
+#resetUpdate {
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  color: #000;
+  border-radius: 20px;
+  margin: 15% 0;
+}
+
+
+/**/
+
+
+/*App page background*/
+
+#getBreakdownTeam-page .page__background,
+#breakdownCategory-page .page__background,
+#faq-page .page__background,
+#userGuide-page .page__background,
+#partnerLocation-page .page__background,
+#checklist-page .page__background,
+#ride_reward .page__background,
+#qrResult-page .page__background,
+#schedule-page .page__background,
+#cart-page .page__background,
+#automall-page .page__background,
+#dashboard-page .page__background,
+#myProfile-page .page__background,
+#chgPassword-page .page__background,
+#myVehicle-page .page__background,
+#rideCredit-page .page__background,
+#topUp-page .page__background,
+#rideReward-page .page__background,
+#breakdown-page .page__background,
+#invoice-page .page__background,
+#favWorkshop-page .page__background,
+#payment-page .page__background,
+#resetPassword-page .page__background {
+  background-image: url("../img/automotive-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#dashboard-page #headline {
+  text-align: center;
+  max-width: 100%;
+}
+
+#dashboard-page #headline img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#dashboard-page #dashboard-table {
+  width: 98%;
+  margin: 2% auto 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#dashboard-page #dashboard-table td {
+  width: 50%;
+  border: 1px solid #ffdd00;
+}
+
+#dashboard-page #dashboard-table tr:first-child td {
+  border-top: 0;
+}
+
+#dashboard-page #dashboard-table tr:last-child td {
+  border-bottom: 0;
+}
+
+#dashboard-page #dashboard-table #td-left {
+  border-left: 0;
+}
+
+#dashboard-page #dashboard-table #td-right {
+  border-right: 0;
+}
+
+#dashboard-page #dashboard-table img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+
+/*.dashboard-table .dashboard-item {
+  width: 50%
+}*/
+
+
+/*.dashboard-table .dashboard-item img {
+  max-width: 100%;
+  max-height: 100%
+}
+
+.carModel {
+  border: none;
+  display: block;
+  padding-left: 10px;
+  font-size: 18px;
+  color: black;
+  background-color: white
+}*/
+
+.carPlate {
+  border: none;
+  display: block;
+  padding-left: 10px;
+  font-size: 18px;
+  color: black;
+  background-color: white
+}
+
+.setSize {
+  max-width: 130px;
+  max-height: 130px
+}
+
+
+/*.setCarSize {
+  display: block;
+  margin: auto;
+  max-width: 55%;
+  max-height: 80%
+}*/
+
+#giftPage {
+  display: none
+}
+
+#servicePage {
+  display: none
+}
+
+#selectFav {
+  display: none
+}
+
+#itemList {
+  display: none
+}
+
+
+/*Change Password*/
+
+#chgPasswordWrapper {
+  width: 95%;
+  margin: 5% auto;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 4%;
+}
+
+#chgPasswordWrapper input {
+  min-width: 75%;
+  max-width: 85%;
+  color: #ffffff;
+  margin: 0 5%;
+}
+
+#chgPasswordBtn {
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+}
+
+
+/*Add Vehicle*/
+
+#myVehicleOverflow {
+  margin-bottom: 3%;
+  height: 90%;
+  overflow: auto;
+}
+
+#addNewVeh-button {
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+}
+
+#myVehicle-page .list {
+  background-color: transparent;
+}
+
+#myVehicle-page .list-item {
+  color: #ffffff;
+}
+
+
+/**/
+
+
+/*Tyre Options*/
+
+#tyreOptionFL input {
+  margin-left: 5%
+}
+
+#tyreOptionFR input {
+  margin-left: 5%
+}
+
+#tyreOptionRL input {
+  margin-left: 5%
+}
+
+#tyreOptionRR input {
+  margin-left: 5%
+}
+
+
+/*#leftTyre {
+  display: inline-block;
+  border: 1px solid #000000;
+  width: 15%;
+  height: 50%
+}
+
+#rightTyre {
+  display: inline-block;
+  border: 1px solid #000000;
+  width: 15%;
+  height: 50%
+}*/
+
+#frontLeftBtn {
+  /*  position: relative;
+  bottom: 200px;
+  left: 3px;*/
+  outline: none;
+  background-color: transparent;
+  max-width: 20%;
+  max-height: 30%;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#frontRightBtn {
+  /*  position: relative;
+  bottom: 200px;
+  left: 35%;
+  font-size: 10px*/
+  outline: none;
+  background-color: transparent;
+  max-width: 20%;
+  max-height: 30%;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  float: right;
+  font-weight: bold;
+}
+
+#rearLeftBtn {
+  /*  position: relative;
+  bottom: 65px;
+  right: 65%;
+  font-size: 10px*/
+  outline: none;
+  background-color: transparent;
+  max-width: 20%;
+  max-height: 30%;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#rearRightBtn {
+  /*  bottom: 100px;
+  left: 67%;
+  font-size: 10px*/
+  outline: none;
+  background-color: transparent;
+  max-width: 20%;
+  max-height: 30%;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  float: right;
+  font-weight: bold;
+}
+
+.tyreButton {
+  background-color: #ffdd00;
+  border-radius: 20px;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  color: #000;
+}
+
+.tyreDialog {
+  text-align: center;
+  margin: 3%
+}
+
+.tyreDialog .button--material:active {
+  background-color: #ffdd00;
+}
+
+
+/*Tyre Breakdown Page*/
+
+#tyreBreakdown-page .page__background {
+  background-color: #636974
+}
+
+#damageInfoWrapper {
+  height: 100%
+}
+
+#damageInfoWrapper h4 {
+  text-align: center;
+  background-color: #ffdd00;
+  color: #000;
+  padding: 2% 0;
+  margin: 0 0 5% 0;
+}
+
+#damageInfoWrapper img {
+  display: block;
+  margin: auto;
+  max-width: 60%;
+  max-height: 80%
+}
+
+#damageInfoWrapper p {
+  font-weight: bold;
+  margin-left: 7.5%;
+  color: #ffffff
+}
+
+#damageInfoWrapper input {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  color: #ffffff
+}
+
+#damageInfoBtn {
+  background-color: #ffdd00;
+  border-radius: 20px;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  color: #000;
+}
+
+
+/*Get Breakdown Team*/
+
+#breakdown-page .list {
+  background-color: transparent;
+}
+
+#breakdown-page .list-item {
+  color: #ffffff
+}
+
+#workshopList {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#workshopList tr {
+  border-bottom: 1px solid #000;
+}
+
+#workshopList td {
+  padding: 3%;
+  background-color: #fff;
+}
+
+#workshopList tr td img {
+  max-width: 90%;
+  max-height: 80%;
+  /*width: 100px;
+  height: 20px;*/
+  /*width: 70%;
+  height: 10%;*/
+}
+
+#workshopLabel {
+  text-align: center;
+  display: block;
+  background-color: #ffdd00;
+  color: #000;
+  padding: 2% 0;
+  font-weight: bold;
+}
+
+
+/* login css -start- */
+
+
+/*.maintitle {
+  color: #4A4A4A;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main {
+  margin-top: 150px;
+}*/
+
+
+/*image logo for login*/
+
+#logo1 {
+  height: 300px;
+  width: 300px;
+}
+
+
+/*image adjusting to center*/
+
+.logo1 {
+  text-align: center;
+}
+
+
+/*button logo (1)*/
+
+#logo2 {
+  margin: 5px;
+}
+
+
+/*login button changes of css (1)*/
+
+#loginbutton {
+  width: 80%;
+  padding: 5px;
+  border-radius: 25px;
+  background-color: #8CC63E;
+  color: white;
+  font-style: sans-serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/*submit button changes css*/
+
+.submitbtn {
+  text-align: center;
+}
+
+#loginbutton:hover {
+  opacity: 0.6;
+}
+
+
+/*content changes on css*/
+
+#memberid {
+  box-shadow: none;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #4A4A4A;
+  outline: none;
+  color: #4A4A4A;
+}
+
+#password {
+  box-shadow: none;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #4A4A4A;
+  outline: none;
+  color: #4A4A4A;
+}
+
+#forget_password {
+  text-decoration: underline;
+  display: inline-block;
+  color: #4A4A4A;
+  font-size: 20px;
+}
+
+#not_member {
+  text-decoration: underline;
+  float: right;
+  color: #4A4A4A;
+  font-size: 20px;
+}
+
+
+/* login css -End- */
+
+
+/* Payment wrapper */
+
+#paymentAgreement label {
+  display: block
+}
+
+#paymentAgreement button {
+  background-color: #ffdd00;
+  border-radius: 20px;
+}
+
+#paymentWrapper {
+  color: #fff;
+  height: 98%
+}
+
+#paymentWrapper .paymentTop {
+  display: block;
+  width: 95%;
+  height: 50%;
+  margin: 3% auto;
+  border: solid 1px #fff
+}
+
+#paymentWrapper .paymentTop table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+#paymentWrapper .paymentTop th {
+  height: 25px
+}
+
+#paymentWrapper .paymentTop td {
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #D3CFCF
+}
+
+#paymentWrapper .paymentMiddle {
+  width: 95%;
+  text-align: right;
+  border: 1px solid #fff;
+  margin: 0 auto;
+}
+
+#paymentWrapper .paymentMiddle label {
+  display: block;
+  margin: 1% 2% 1% 0;
+  font-size: 12px;
+}
+
+#paymentWrapper .paymentMiddle button {
+  outline: none;
+  background-color: #ffdd00;
+  border: none;
+  border-radius: 20px;
+  margin-right: 2%;
+}
+
+#paymentWrapper .grandTotal {
+  width: 95%;
+  background-color: #D3CFCF;
+  text-align: center;
+  color: #000000;
+  margin: 2% auto;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#paymentWrapper .grandTotal label {
+  display: block;
+}
+
+#paymentWrapper .paymentBottom p {
+  font-size: 12px;
+}
+
+#paymentWrapper .paymentBottom table {
+  border-collapse: collapse;
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12px;
+  border: solid 1px #fff;
+}
+
+#paymentWrapper .paymentBottom th,
+#paymentWrapper .paymentBottom td {
+  padding: 2%;
+}
+
+#paymentTopUp,
+#payBtn {
+  background-color: #ffdd00;
+  border-radius: 20px;
+  min-width: 40%;
+  max-width: 60%;
+  color: #000000;
+  margin: 3% 0;
+}
+
+
+/*QR Dialog*/
+
+#qrData {
+  display: block;
+  margin: 5% auto;
+  text-align: center;
+}
+
+
+/*Rating wrapper*/
+
+#ratingWrapper {
+  text-align: center
+}
+
+#ratingWrapper button {
+  margin: 5% 0;
+}
+
+#comment {
+  display: block;
+  margin: 0 auto 0 auto
+}
+
+input.heart {
+  display: none
+}
+
+input.heart+label {
+  content: url("../img/grey_heart.png");
+  max-width: 10%;
+  max-height: 10%
+}
+
+input.heart:checked+label {
+  content: url("../img/heart.png");
+}
+
+
+/*css Stars*/
+
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star {
+  display: none;
+}
+
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.star:checked~label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked~label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked~label.star:before {
+  color: #F62;
+}
+
+label.star:hover {
+  transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+
+
+/*My Profile*/
+
+.profileTableWrapper {
+  display: block;
+  width: 90%;
+  margin: 5% auto;
+  color: #ffffff;
+  padding: 4%
+}
+
+.profileTableWrapper input {
+  color: #ffffff;
+}
+
+
+/*Overflow*/
+
+#profileVehicleWrapper {
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  height: 45%;
+  overflow: auto;
+}
+
+#profileVehicleWrapper .list {
+  background-color: transparent;
+}
+
+#profileVehicleWrapper .list-header {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#profileVehicleWrapper #loadProfileVehicles img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+#profileVehicleWrapper #loadProfileVehicles .list-item__thumbnail {
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  border-radius: 0px;
+}
+
+#profileVehicleWrapper #loadProfileVehicles .list-item__title {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#changePassword-button {
+  margin: 5% 0;
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+}
+
+#saveProfile-button {
+  visibility: hidden;
+  /*  background-color: #43dc25;*/
+  background-color: #ffdd00;
+  min-width: 45%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+}
+
+
+/*Car Specs*/
+
+#carSpecsTable {
+  width: 100%
+}
+
+#carSpecsTable #widthColumn,
+#carSpecsTable #ratioColumn,
+#carSpecsTable #rimColumn {
+  visibility: hidden;
+}
+
+#carSpecsWrapper label {
+  display: block
+}
+
+#carSpecsWrapper .specData {
+  font-weight: bold;
+}
+
+#carSpecsWrapper input {
+  max-width: 70px;
+  border: none;
+  background-color: transparent;
+}
+
+#carSpecsWrapper th {
+  background-color: #ffdd00;
+  height: 30px;
+  color: #000;
+}
+
+#carSpecsWrapper td {
+  border: 1px solid #D3CFCF;
+  vertical-align: middle;
+  height: 50px;
+}
+
+#carSpecsTable .btnDef {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 30%;
+  color: #3E79C6;
+  border: 1px solid #4385D6;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+#saveCarSpec {
+  visibility: hidden;
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  margin: 3% 0;
+  color: #000;
+}
+
+
+/*Add Vehicle Page*/
+
+#addVehTable {
+  width: 99%;
+  table-layout: fixed;
+  margin-left: 0.5%
+}
+
+#addVehTable th {
+  background-color: #ffdd00;
+  height: 30px;
+  color: #000;
+}
+
+#addVehTable td {
+  border: 1px solid #D3CFCF;
+  vertical-align: middle;
+  height: 50px;
+  width: 50%
+}
+
+#addVehTable select {
+  font-size: 14px;
+  width: 95%;
+}
+
+#addVehTable label {
+  display: block
+}
+
+#addVehTable #regVehPlate {
+  max-width: 70%
+}
+
+#addVehTable .btnDef {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 30%;
+  color: #3E79C6;
+  border: 1px solid #4385D6;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+#addVehBtn {
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+  margin: 2% 0;
+}
+
+
+/*ride-Credit page*/
+
+#rideCredit-page label {
+  display: inline-block;
+  margin: 2% 0 0 2%;
+  color: #ffffff
+}
+
+#creditTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0 auto;
+  width: 98%
+}
+
+
+/*#creditHeader {
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+
+#creditHeader th {
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  padding: 1%;
+  width: 30%
+}*/
+
+#creditTable th {
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  padding: 1%
+}
+
+#creditTable tbody {
+  border: solid 1px #ffffff
+}
+
+#creditTable td {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  width: 30%
+}
+
+#topUp-button {
+  background-color: #ffdd00;
+  border-radius: 20px;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  color: #000;
+}
+
+
+/*ride reward page*/
+
+#rideReward-page label {
+  display: inline-block;
+  margin: 2% 0 0 2%;
+  color: #ffffff
+}
+
+#rewardTable th {
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  padding: 1%
+}
+
+#rewardTable tbody {
+  border: solid 1px #ffffff
+}
+
+#rewardTable td {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  width: 30%
+}
+
+#redeem-button {
+  background-color: #ffdd00;
+  border-radius: 20px;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  color: #000;
+}
+
+
+/*Top Up page*/
+
+#topUpWrapper img {
+  display: block;
+  margin: 3% auto 0 auto;
+  max-width: 35%;
+  max-height: 35%;
+}
+
+#topUpWrapper {
+  text-align: center
+}
+
+#topUpWrapper button {
+  color: #ffdd00;
+  border-color: #ffdd00;
+  border-radius: 5px;
+  min-width: 85%;
+  margin-top: 5%;
+}
+
+#topUpWrapper .list {
+  background-color: transparent;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#topUpWrapper .list-item {
+  color: #ffdd00;
+}
+
+#topUpWrapper #topUpTable select {
+  border: 2px solid #ffdd00;
+  width: 100%;
+}
+
+#topUpTable {
+  text-align: center;
+  width: 98%;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  margin: 0 auto;
+}
+
+#topUpTable th {
+  font-weight: normal;
+  height: 45px;
+  font-size: 16px;
+}
+
+#topUpTable td {
+  background-color: #fff;
+  height: 40px;
+  font-weight: bold;
+}
+
+#topUp-page label {
+  color: #ffffff;
+}
+
+#confirmTopUp {
+  background-color: #ffdd00;
+  border-radius: 20px;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+  color: #000;
+}
+
+
+/*Invoice page*/
+
+#invoiceTable {
+  border-collapse: collapse;
+  margin: 4% auto;
+  width: 98%
+}
+
+#invoiceTable th {
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  padding: 1%
+}
+
+#invoiceTable tbody {
+  border: solid 1px #ffffff
+}
+
+#invoiceTable td {
+  border-style: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  padding: 2% 0;
+}
+
+#checklistBtn {
+  background-color: #ffdd00;
+  border-radius: 20px;
+  margin: 2% 0;
+  min-width: 40%;
+  max-width: 60%;
+}
+
+
+/*Invoice detail page*/
+
+#invoiceDetails {
+  max-width: 98%;
+  /*  height: 100%;*/
+  margin: 0 auto;
+}
+
+#invTopWrapper {
+  border: 1px solid #000000;
+  height: 50%;
+  overflow-y: auto;
+}
+
+#invDetail {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  border-style: none;
+  border-color: #D3CFCF
+}
+
+#invDetail th {
+  font-weight: normal;
+  font-size: 11px;
+  border-style: none
+}
+
+#invDetail td {
+  font-size: 11px;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #D3CFCF
+}
+
+#invPayment {
+  margin: 2% auto;
+  font-size: 12px;
+  width: 100%;
+  border: solid 1px #D3CFCF
+}
+
+#invPayment .tdRight {
+  text-align: right;
+  font-weight: bold
+}
+
+
+/*Shopping Cart*/
+
+#cartWrapper {
+  color: #ffffff
+}
+
+#cartWrapper table {
+  border-collapse: collapse;
+  margin: 0 auto
+}
+
+#cartWrapper th {
+  border: solid 1px #ffffff;
+  padding: 4%
+}
+
+
+/*Partner Location*/
+
+#partnerLocWrapper button {
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px
+}
+
+
+/*Favorite Workshop*/
+
+#favWorkshopList h4 {
+  text-align: center;
+  display: block;
+  background-color: #4E4A4A;
+  padding: 2% 0;
+  color: #ffffff;
+  margin: 0
+}
+
+#favWorkshopList .list {
+  background-color: #ffffff;
+}
+
+#favWorkshopList .list-item {
+  color: #ffffff;
+}
+
+
+/*Popover Button*/
+
+#popover #popoverButton {
+  background-color: #ffdd00;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 20px;
+  color: #000;
+}
+
+
+/*terms and conditions*/
+
+#termsContainer {
+  width: 95%;
+  height: 80%;
+  overflow-y: auto;
+  margin: 2% auto;
+  background-color: #fff;
+}
+
+#terms-page label {
+  color: #fff;
+}
+
+#terms-button {
+  color: #000;
+  min-width: 40%;
+  max-width: 60%;
+  background-color: #ffdd00;
+  border-radius: 20px;
+}
+
+
+/*Checklist page*/
+
+#checklist-page #checklistTop p {
+  color: #fff;
+  text-align: center;
+}
+
+#checklist-page #checklistWrapper {
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid white;
+  color: #fff;
+}
+
+#getBreakdownTeam-page a {
+  text-decoration: none;
+  color: #ffdd00;
+}
+
+#getBreakdownTeam-page a:visited {
+  text-decoration: none;
+  color: #ffdd00;
+}
+
+#breakdownCategory-page #loadBreakdownCategory img {
+  display: block;
+  margin: 15% auto;
+  max-width: 40%;
+  max-height: 40%;
+}

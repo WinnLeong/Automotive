@@ -1,0 +1,97 @@
+/**/
+
+
+/*#ride_reward .page__background {
+  background-image: url('../background.png');
+}*/
+
+#btn_gift :checked+.segment__button {
+  font-weight: bolder;
+  background-color: transparent;
+  color: #000;
+}
+
+#btn_voucher :checked+.segment__button {
+  font-weight: bolder;
+  background-color: transparent;
+  color: #000;
+}
+
+#reward_div .segment__item {
+  font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 800;
+  border-radius: 0;
+  width: 100%;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: block;
+  background-color: #ffdd00;
+  border: none;
+  color: #000;
+}
+
+#reward_div .segment__button {
+  color: #000;
+  font-size: 20px;
+  height: 45px;
+  line-height: 45px;
+}
+
+#table_voucher,
+#table_gift {
+  border-collapse: separate;
+  border-spacing: 0px 5px;
+  padding: 0 0 0 0;
+}
+
+#table_voucher,
+#table_gift td {
+  text-align: center;
+}
+
+#table_voucher,
+#table_gift tr {
+  background-color: #fff;
+  margin-bottom: 0px 0px 10px 0px;
+}
+
+.title_price {
+  font-size: 12px;
+  font-weight: 350;
+}
+
+.title_name {
+  padding-left: 5px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.redeem {
+  background-color: transparent;
+  color: #ffdd00;
+  width: 180px;
+  padding: 7px 10px 7px 20px;
+  border-radius: 4px;
+  border-color: #ffdd00;
+  text-align: center;
+  font-size: 14px
+}
+
+.redeem_disable {
+  background-color: transparent;
+  color: #C6C6C6;
+  width: 180px;
+  padding: 7px 20px 7px 20px;
+  border-radius: 4px;
+  border-color: #C6C6C6;
+  text-align: center;
+  font-size: 14px
+}
+
+#row_gift {
+  margin: 30px;
+}

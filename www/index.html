@@ -1,0 +1,1990 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">-->
+  <meta name="format-detection" content="telephone=no">
+
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="css/automall.css">
+  <link rel="stylesheet" href="css/reward.css">
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOFLLnnWDkGPEFPgaT4t0eZHtLzt5xRcI&libraries=places"></script>
+  <script src="scripts/controller.js"></script>
+  <script src="scripts/gmaps.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="scripts/automall.js"></script>
+  <script src="scripts/schedule.js"></script>
+  <script src="scripts/oneSignal.js"></script>
+  <script src="scripts/reward.js"></script>
+
+</head>
+
+<body>
+  <ons-splitter>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse>
+      <ons-page id="menu-page">
+        <ons-list-header class="welcome" id="getMenuName"></ons-list-header>
+        <ons-list>
+          <ons-list-item modifier="nodivider" onclick="fn.load('myProfile.html')" tappable>
+            My Profile
+          </ons-list-item>
+          <!--  <ons-list-item modifier="nodivider" onclick="fn.load('myService.html')" tappable>
+            My Service
+          </ons-list-item>-->
+          <ons-list-item modifier="nodivider" onclick="fn.load('myInvoice.html')" tappable>
+            My Invoice
+          </ons-list-item>
+          <ons-list-item modifier="nodivider" onclick="fn.load('favWorkshop.html')" tappable>
+            Favorite Workshop
+          </ons-list-item>
+          <!--  <ons-list-item modifier="nodivider" onclick="fn.load('menuReferral.html')" tappable>
+            Referral
+          </ons-list-item>-->
+          <!--  <ons-list-item modifier="nodivider" onclick="fn.load('userGuide.html')" tappable>
+            User Guide
+          </ons-list-item>
+          <ons-list-item modifier="nodivider" onclick="fn.load('faq.html')" tappable>
+            FAQ
+          </ons-list-item>-->
+          <ons-list-item modifier="nodivider" onclick="Logout()" tappable>
+            Logout
+          </ons-list-item>
+          <ons-list-item modifier="nodivider">
+            <div class="list-item__right" style="font-size: 12px;">
+              V.1.1.34
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content id="content" page="navigatorController.html"></ons-splitter-content>
+  </ons-splitter>
+
+  <ons-template id="navigatorController.html">
+    <ons-page id="navigatorController">
+      <ons-navigator animation="fade" id="navigator" page="login.html"></ons-navigator>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="login.html">
+    <ons-page id="login-page">
+
+      <img src="img/logo.png">
+
+      <!--  <input class="text-input text-input--material" type="text" placeholder="Email" id="loginEmail" onfocus=this.placeholder="" onfocusout=this.placeholder="Email">-->
+      <input class="text-input text-input--material" type="tel" placeholder="Phone Number" id="loginPhone" onfocus=this.placeholder="" onfocusout='this.placeholder="Phone Number"'>
+      <input class="text-input text-input--material" type="password" placeholder="Password" id="loginPassword" onfocus=this.placeholder="" onfocusout=this.placeholder="Password">
+
+      <!--<ons-input type="text" placeholder="Email" id="loginEmail" float></ons-input>
+      <ons-input type="password" placeholder="Password" id="loginPassword" float></ons-input>-->
+
+      <!--  <label class="checkbox">
+        <input type="checkbox" name="rememberMe" class="checkbox__input">
+        <div class="checkbox__checkmark"></div>
+        Remember Me
+      </label>-->
+
+      <label style="font-size:14px; color:#ffdd00" onclick="ResetPassword()">Forget Password?</label>
+
+      <div style="margin-top:30%">
+
+        <button id="loginBtn" class="button button--outline" onclick="Login()">Login</button>
+
+        <!--<label>Don't have an account?</label>-->
+        <!--<a href="#" id="resetPassword-button">Forget Password?</a>-->
+
+        <button class="button button--outline" id="register-button">Register</button>
+
+      </div>
+
+      <label id="versionNumber">V.1.1.34</label>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="resetPassword.html">
+    <ons-page id="resetPassword-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">Reset Password</div>
+      </ons-toolbar>
+
+      <div id="resetPasswordWrapper">
+        <input type="text" class="text-input text-input--material" id="resetEmail" placeholder="Enter your email">
+        <button id="checkEmail" class="button button--material" onclick="ResetEmail()">Check Email</button>
+
+        <div id="resetIcWrapper">
+          <input type="tel" class="text-input text-input--material" id="resetIc" placeholder="Enter your IC">
+          <button id="checkIc" class="button button--material" onclick="ResetIc()">Check IC</button>
+        </div>
+
+        <div id="resetPwdWrapper">
+          <input type="password" class="text-input text-input--material" id="resetPwd" placeholder="New Password">
+          <input type="password" class="text-input text-input--material" id="re-enterPwd" placeholder="Re-enter Password">
+        </div>
+
+        <div style="text-align: center">
+          <button class="button button--material" id="resetUpdate" onclick="ResetUpdate()">Update</button>
+        </div>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="register.html">
+    <ons-page id="register-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Register
+        </div>
+      </ons-toolbar>
+
+      <!--Personal Details-->
+      <div id="personalDetWrapper">
+
+        <h4>Personal Details</h4>
+
+        <div id="regName">
+          <p>Name</p>
+
+          <select id="titleSelection" class="select-input">
+            <option value="title" selected disabled>Title</option>
+            <option value="1">Mr.</option>
+            <option value="2">Ms.</option>
+            <option value="3">Mrs.</option>
+          </select>
+
+          <input class="text-input text-input--material" id="name" type="text" placeholder="Name">
+        </div>
+
+        <div id="regPwd">
+          <p>Password</p>
+          <input class="text-input text-input--material" id="pwd" type="password" placeholder="(Min 8 chars)" style="width: 95%">
+        </div>
+
+        <div id="regAddress">
+          <p>Address</p>
+          <input class="text-input text-input--material" id="address-input" type="text" style="width: 95%">
+        </div>
+
+        <div id="stateWrapper">
+          <p>State</p>
+          <!--  <input class="text-input text-input--material" id="state" type="text" style="width: 90%">-->
+
+        </div>
+
+        <div id="postcodeWrapper">
+          <p>Postcode</p>
+          <!--  <input class="text-input text-input--material" id="postcode" type="text" style="width: 90%">-->
+          <select class="select-input select-input--material" style="min-width: 90%">
+            <option value="blank" selected disabled></option>
+          </select>
+        </div>
+
+        <!--  <div id="regEmail">
+          <p>Email</p>
+          <input class="text-input text-input--material" id="email" type="email" placeholder="" onfocusout="VerifyEmail()" style="width: 95%">
+        </div>-->
+
+        <!--  <div id="nationality">
+          <label id="lblNationality">Nationality</label>
+
+          <label for="radio-1" class="radio-button radio-button--material">
+            <input type="radio" class="radio-button__input radio-button--material__input" id="radio1" name="nationality" checked onchange="Malaysian()">
+            <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+            Malaysian
+          </label>
+
+          <label for="radio-2" class="radio-button radio-button--material">
+            <input type="radio" class="radio-button__input radio-button--material__input" id="radio2" name="nationality" onchange="Foreigner()">
+            <div class="radio-button__checkmark radio-button--material__checkmark"></div>
+            Foreigner
+          </label>
+
+        </div>-->
+
+        <!--<div id="nricPassport">
+          <p id="nricPassportText">NRIC</p>
+          <input class="text-input text-input--material" id="nric" type="tel" placeholder="(Eg: xxxxxxxxxxxx)">
+        </div>-->
+
+        <div id="birthdayWrapper">
+          <p>Date of Birth</p>
+          <input class="text-input text-input--material" id="birthyear" type="tel" placeholder="YYYY" maxlength="4" style="width:25%">
+          <label>-</label>
+          <input class="text-input text-input--material" id="birthmonth" type="tel" placeholder="MM" maxlength="2" style="width:15%">
+          <label>-</label>
+          <input class="text-input text-input--material" id="birthday" type="tel" placeholder="DD" maxlength="2" style="width:15%">
+        </div>
+
+        <div id="regMobile">
+          <p>Mobile</p>
+          <!--  <input id="hpRegion" type="tel" value="+60">-->
+          <select class="select-input" id="phoneCode">
+            <option value="blank" disabled></option>
+          </select>
+          <input class="text-input text-input--material" id="hpNo" type="tel" placeholder="Number">
+        </div>
+
+      </div>
+
+      <!--Vehicle Details-->
+      <!--  <table id="regTable">
+        <tr>
+          <th colspan="2">Vehicle Details</th>
+        </tr>
+        <tr>
+          <td>
+            <label>Vehicle Plate</label>
+            <input class="text-input text-input--material" id="regVehPlate" type="text" placeholder="(Eg: ABC1234)" onfocusout="VerifyPlate()" style="text-transform:uppercase">
+          </td>
+          <td>
+            <label>Vehicle Type</label>
+            <select class="select-input" id="regVehType" onchange="GetVehMaker()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Maker</label>
+            <select class="select-input" id="regVehMaker" onchange="GetVehModel()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Model</label>
+            <select class="select-input" id="regVehModel" onchange="GetVehBatt()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Year</label>
+            <select class="select-input" id="regVehYear" onchange="GetVehBatt()">
+              <option value="blank" selected disabled></option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+              <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+            </select>
+          </td>
+          <td>
+            <label>Variants</label>
+            <select class="select-input" id="regVehVariant">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Vehicle Color</label>
+            <select class="select-input" id="regVehColor">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Transmission</label>
+            <select class="select-input" id="regVehTransmission">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Fuel Type</label>
+            <select class="select-input" id="regVehFuel">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Battery Model</label>
+            <select class="select-input" id="regBattModel">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>-->
+      <!--Tyre Dimension-->
+      <!--  <tr>
+          <th colspan="2">Tyre Dimension
+            <button class="btnDef" onclick="showTyreGuide(this)">View Tyre Guide</button>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <label>Width</label>
+            <select class="select-input" id="regTyreWidth">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Aspect Ratio</label>
+            <select class="select-input" id="regTyreRatio">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Rim Size</label>
+            <select class="select-input" id="regTyreRim">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <ons-popover direction="up" id="popover">
+        <div style="padding: 10px; text-align: center;">
+          <img src="img/view-tyre-guide.jpg" alt="Tyre Guide" width="200" height="66">
+          <p>
+            <button class="button button--material" id="popoverButton" onclick="hideTyreGuide()">Close</button>
+          </p>
+        </div>
+      </ons-popover>-->
+
+      <div style="text-align:center">
+        <ons-button id="regBtn" onclick="GetRegData()">DONE</ons-button>
+      </div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="regVehicle.html">
+    <ons-page id="regVehicle-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Register
+        </div>
+      </ons-toolbar>
+
+      <table id="regTable">
+        <tr>
+          <th colspan="2">Vehicle Details</th>
+        </tr>
+        <tr>
+          <td>
+            <label>Vehicle Plate</label>
+            <input class="text-input text-input--material" id="regVehPlate" type="text" placeholder="(Eg: ABC1234)" style="text-transform:uppercase">
+          </td>
+          <td>
+            <label>Brand</label>
+            <select class="select-input" id="regVehBrand" onchange="loadVehModel()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Model</label>
+            <select class="select-input" id="regVehModel" onchange="loadVehVariant()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Variants</label>
+            <select class="select-input" id="regVehVariant">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Color</label>
+            <select class="select-input" id="regVehColor">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <div style="text-align:center">
+        <ons-button id="regCompleteBtn" onclick="GetVehRegData()">COMPLETE</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="referral.html">
+    <ons-page id="referral-page">
+
+      <label>Referral Program</label>
+
+      <label>Referral's Email:</label>
+      <input type="text">
+
+      <label>Referral's Phone Number:</label>
+      <input type="text">
+
+      <ons-button onclick="fn.pop()">Cancel</ons-button>
+      <ons-button onclick="Register()">Done</ons-button>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="dashboard.html">
+    <ons-page id="dashboard-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Dashboard
+        </div>
+        <div class="right" id="dashboard-right"></div>
+      </ons-toolbar>
+
+      <div id="headline">
+        <img src="img/Advertisement.jpeg">
+      </div>
+
+      <table id="dashboard-table">
+        <tr>
+          <td id="td-left">
+            <img id="myVehicle-button" src="img/MyVehicle_icon.png">
+          </td>
+          <td id="td-right">
+            <img onclick="fn.load('automall.html')" src="img/AutoMall_icon.png">
+          </td>
+        </tr>
+        <tr>
+          <td id="td-left">
+            <img id="breakdown-button" src="img/BreakdownAssist_icon.png">
+          </td>
+          <td id="td-right">
+            <img id="schedule-button" src="img/Schedule_icon.png">
+          </td>
+        </tr>
+        <tr>
+          <td id="td-left">
+            <img id="credit-button" src="img/logo.png">
+          </td>
+          <td id="td-right">
+            <img id="reward-button" src="img/logo.png">
+          </td>
+        </tr>
+      </table>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="myProfile.html">
+    <ons-page id="myProfile-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          My Profile
+        </div>
+        <div class="right">
+          <ons-toolbar-button id="editProfile-button" onclick="EnableProfileEdit()">Edit</ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+      <table class="profileTableWrapper">
+        <tr>
+          <td>
+            <label for="profileName">Name</label>
+          </td>
+          <td>
+            <input class="text-input text-input--material" id="profileName" type="text" style="opacity:0.7" disabled>
+          </td>
+        </tr>
+        <tr>
+          <!--<td>
+            <label for="nric">IC No</label>
+          </td>
+          <td>
+            <input class="text-input text-input--material" id="nric" type="tel" style="opacity:0.7" disabled>
+          </td>-->
+          <td>
+            <label>Birth</label>
+          </td>
+          <td>
+            <input class="text-input text-input--material" id="profileBirthday" type="tel" placeholder="yyyy-mm-dd" style="opacity:0.7" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="profileMobile">Mobile No</label>
+          </td>
+          <td>
+            <input class="text-input text-input--material" id="profileMobile" style="opacity:0.7" type="tel" disabled>
+          </td>
+        </tr>
+        <tr>
+          <!--  <td>
+            <label for="profileEmail">Email Address</label>
+          </td>
+          <td>
+            <input class="text-input text-input--material" id="profileEmail" style="opacity:1.0" type="text" disabled>
+          </td>-->
+          <td>
+            <label>Address</label>
+          </td>
+          <td>
+            <input class="text-input text-input--material" id="profileAddress" style="opacity:0.7" type="text" disabled>
+          </td>
+        </tr>
+      </table>
+
+      <div id="profileVehicleWrapper">
+        <ons-list id="loadProfileVehicles">
+        </ons-list>
+      </div>
+
+      <div style="text-align:center">
+        <label style="display:block">
+          <ons-button id="changePassword-button">Change Password</ons-button>
+        </label>
+        <ons-button id="saveProfile-button" onclick="SaveProfile()" style="margin:2%">Save Changes</ons-button>
+      </div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="chgPassword.html">
+    <ons-page id="chgPassword-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Change Password
+        </div>
+      </ons-toolbar>
+
+      <table id="chgPasswordWrapper">
+        <tr>
+          <td>Old Password</td>
+          <td>
+            <input class="text-input text-input--material" id="oldPwd" type="password">
+          </td>
+        </tr>
+        <tr>
+          <td>New Password</td>
+          <td>
+            <input class="text-input text-input--material" id="newPwd" type="password">
+          </td>
+        </tr>
+        <tr>
+          <td>Re-type Password</td>
+          <td>
+            <input class="text-input text-input--material" id="reNewPwd" type="password">
+          </td>
+        </tr>
+      </table>
+
+      <div style="text-align:center">
+        <ons-button id="chgPasswordBtn" onclick="ChangePassword()">Save</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="myService.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          My Service
+        </div>
+      </ons-toolbar>
+
+      <ul>
+        <li>Pending</li>
+        <li>Schedule</li>
+        <li>In Progress</li>
+        <li>Completed</li>
+      </ul>
+
+      <table>
+        <tr>
+          <th>Job ID</th>
+          <th>Job Title</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Job ID</th>
+          <th>Job Title</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Job ID</th>
+          <th>Job Title</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Job ID</th>
+          <th>Job Title</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </table>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="myInvoice.html">
+    <ons-page id="invoice-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Invoice
+        </div>
+      </ons-toolbar>
+
+      <div id="invoiceTableWrapper" style="display:none; overflow-y:auto; height: 85%">
+        <table id="invoiceTable"></table>
+      </div>
+
+      <div id="noData" style="text-align:center; color:#fff; font-size: 5vmin; font-weight: bold; margin-top: 5%"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="invoiceDetail.html">
+    <ons-page id="invDetail-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Invoice
+        </div>
+      </ons-toolbar>
+
+      <div id="invoiceDetails"></div>
+      <div id="invTopWrapper">
+        <table id="invDetail">
+          <tr>
+            <th>Qty</th>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+        </table>
+      </div>
+      <table id="invPayment"></table>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="favWorkshop.html">
+    <ons-page id="favWorkshop-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Favorite Workshop
+        </div>
+      </ons-toolbar>
+
+      <div id="map" style="width:100%;height:50%"></div>
+      <div id="favWorkshopList"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="menuReferral.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Referral
+        </div>
+      </ons-toolbar>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="userGuide.html">
+    <ons-page id="userGuide-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          User Guide
+        </div>
+      </ons-toolbar>
+
+      <div style="text-align: center; color:#fff">Page is under construction</div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="faq.html">
+    <ons-page id="faq-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          FAQ
+        </div>
+      </ons-toolbar>
+
+      <div style="text-align: center; color:#fff">Page is under construction</div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="myPurchase.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          My Purchase
+        </div>
+      </ons-toolbar>
+
+    </ons-page>
+  </ons-template>
+
+  <!--  <ons-template id="mySchedule.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          My Schedule
+        </div>
+      </ons-toolbar>
+
+    </ons-page>
+  </ons-template>-->
+
+  <ons-template id="chat.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          Chat
+        </div>
+      </ons-toolbar>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="myVehicle.html">
+    <ons-page id="myVehicle-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          My Vehicle Activity
+        </div>
+      </ons-toolbar>
+
+      <div id="myVehicleOverflow">
+        <ons-list id="loadMyVehicles"></ons-list>
+      </div>
+
+      <div style="text-align:center">
+        <ons-button id="addNewVeh-button">ADD NEW VEHICLE</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="carSpecs.html">
+    <ons-page id="carSpecs-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Car Specs
+        </div>
+        <div class="right">
+          <ons-toolbar-button id="editVehicle-button" onclick="EnableEditVehicle()">Edit</ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+      <div id="carSpecsWrapper"></div>
+
+      <ons-popover direction="up" id="popover">
+        <div style="padding: 10px; text-align: center;">
+          <img src="img/view-tyre-guide.jpg" alt="Tyre Guide" width="200" height="66">
+          <p>
+            <ons-button id="popoverButton" onclick="hideTyreGuide()">Close</ons-button>
+          </p>
+        </div>
+      </ons-popover>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="addNewVeh.html">
+    <ons-page id="addVehicle-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Add Vehicle
+        </div>
+      </ons-toolbar>
+
+      <!--Vehicle Details-->
+      <!--      <table id="addVehTable">
+        <tr>
+          <th colspan="2" style="text-align: left; padding-left: 4%;">Vehicle Details</th>
+        </tr>
+        <tr>
+          <td>
+            <label>Vehicle Plate</label>
+            <input class="text-input text-input--material" id="regVehPlate" type="text" placeholder="(Eg: ABC1234)" onfocusout="VerifyPlate()" style="text-transform:uppercase">
+          </td>
+          <td>
+            <label>Vehicle Type</label>
+            <select class="select-input" id="regVehType" onchange="loadVehBrand()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Maker</label>
+            <select class="select-input" id="regVehMaker" onchange="loadVehModel()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Model</label>
+            <select class="select-input" id="regVehModel" onchange="GetVehBatt()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Year</label>
+            <select class="select-input" id="regVehYear" onchange="GetVehBatt()">
+              <option value="blank" selected disabled></option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+              <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+            </select>
+          </td>
+          <td>
+            <label>Variants</label>
+            <select class="select-input" id="regVehVariant">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Vehicle Color</label>
+            <select class="select-input" id="regVehColor">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Transmission</label>
+            <select class="select-input" id="regVehTransmission">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Fuel Type</label>
+            <select class="select-input" id="regVehFuel">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Battery Model</label>
+            <select class="select-input" id="regBattModel">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>-->
+      <!--Tyre Dimension-->
+      <!--        <tr>
+          <th colspan="2">Tyre Dimension
+            <button class="btnDef" onclick="showTyreGuide(this)">View Tyre Guide</button>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <label>Width</label>
+            <select class="select-input" id="regTyreWidth">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Aspect Ratio</label>
+            <select class="select-input" id="regTyreRatio">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Rim Size</label>
+            <select class="select-input" id="regTyreRim">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+      </table>-->
+
+      <table id="addVehTable">
+        <tr>
+          <th colspan="2">Vehicle Details</th>
+        </tr>
+        <tr>
+          <td>
+            <label>Vehicle Plate</label>
+            <input class="text-input text-input--material" id="regVehPlate" type="text" placeholder="(Eg: ABC1234)" style="text-transform:uppercase">
+          </td>
+          <td>
+            <label>Brand</label>
+            <select class="select-input" id="regVehBrand" onchange="loadVehModel()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Model</label>
+            <select class="select-input" id="regVehModel" onchange="loadVehVariant()">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+          <td>
+            <label>Variants</label>
+            <select class="select-input" id="regVehVariant">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Color</label>
+            <select class="select-input" id="regVehColor">
+              <option value="blank" selected disabled></option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <ons-popover direction="up" id="popover">
+        <div style="padding: 10px; text-align: center;">
+          <img src="img/view-tyre-guide.jpg" alt="Tyre Guide" width="200" height="66">
+          <p>
+            <button class="button button--material" id="popoverButton" onclick="hideTyreGuide()">Close</button>
+          </p>
+        </div>
+      </ons-popover>
+
+      <div style="text-align:center">
+        <ons-button id="addVehBtn" onclick="AddVehicle()">ADD</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="tyrePurchase.html">
+    <ons-page id="tyrePurchase-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Tyre
+        </div>
+        <div class="right">
+          <ons-toolbar-button onclick="fn.load('cart.html')">Cart</ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+      <label>Vehicle/Tyre</label>
+      <select id="tyreSelect">
+        <option value="blank" selected disabled> -------------------- </option>
+      </select>
+
+      <!-- Google Search Bar -->
+
+      <div class="button-bar" style="width:100%; ">
+        <div class="button-bar__item">
+          <button class="button-bar__button" onclick="SelectFavShop()">Favorite Workshop</button>
+        </div>
+        <div class="button-bar__item">
+          <button class="button-bar__button" onclick="DisplayItemList()">All</button>
+        </div>
+      </div>
+
+      <div id="itemList"></div>
+    </ons-page>
+  </ons-template>
+
+  <ons-dialog id="favShopDialog">
+    <div style="text-align: center; padding: 10px;">
+      <div id="favShopOptions"></div>
+    </div>
+  </ons-dialog>
+
+  <ons-template id="battPurchase.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Battery
+        </div>
+        <div class="right">
+          <ons-toolbar-button onclick="fn.load('cart.html')">Cart</ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="carService.html">
+    <ons-page id="carService-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Car Service
+        </div>
+        <!--        <div class="right">
+          <ons-toolbar-button>
+            <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>-->
+      </ons-toolbar>
+
+      <label>Select Vehicle:</label>
+      <select id="selectVehicle" onchange="EnableLastInput()">
+        <option value="blank" selected disabled> -------------- </option>
+      </select>
+
+      <label>Last Service:</label>
+      <input id="lastMileage" type="text" placeholder="Enter Mileage" disabled>
+      <input id="lastDate" type="date" min="2016-03-24" placeholder="Enter date" disabled>
+
+      <label>Next Service:</label>
+      <input id="nextMileage" type="text" placeholder="Enter Mileage" disabled>
+      <input id="nextDate" type="date" max="2019-04-04" placeholder="Enter date" disabled>
+
+      <ons-button>Next</ons-button>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="breakdown.html">
+    <ons-page id="breakdown-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Breakdown
+        </div>
+      </ons-toolbar>
+
+      <ons-list id="loadBreakdownVehicles"></ons-list>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="breakdownCategory.html">
+    <ons-page id="breakdownCategory-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Breakdown Category
+        </div>
+      </ons-toolbar>
+
+      <!--  <ons-list id="loadBreakdownCategory"></ons-list>-->
+      <div id="loadBreakdownCategory"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="tyreBreakdown.html">
+    <ons-page id="tyreBreakdown-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Select Damage Info
+        </div>
+      </ons-toolbar>
+
+      <div id="damageInfoWrapper">
+
+        <h4>Describe your condition</h4>
+
+        <button id="frontLeftBtn" onclick="showDialog('flTyre')">Front Left Tyre</button>
+        <button id="frontRightBtn" onclick="showDialog('frTyre')">Front Right Tyre</button>
+
+        <img src="img/car.png">
+
+        <button id="rearLeftBtn" onclick="showDialog('rlTyre')">Rear Left Tyre</button>
+        <button id="rearRightBtn" onclick="showDialog('rrTyre')">Rear Right Tyre</button>
+
+
+        <p>Remark</p>
+
+        <input class="text-input text-input--material" id="addComments" type="text"></input>
+
+        <div style="text-align:center">
+          <ons-button id="damageInfoBtn" onclick="SaveTyreIssue()">Next</ons-button>
+        </div>
+
+      </div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="getBreakdownTeam.html">
+    <ons-page id="getBreakdownTeam-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button onclick="UserCancelledOrder(); setTimeout(function() {removeHelpdeskStorage();}, 500)"></ons-back-button>
+        </div>
+        <div class="center">
+          Breakdown Team Nearby
+        </div>
+      </ons-toolbar>
+
+      <div id="map" style="width:95%;height:50%; margin: 2% auto; border: solid 2px #ffdd00; border-radius: 5px"></div>
+      <label id="workshopLabel">Please select your preferred workshop</label>
+
+      <div style="overflow-y:auto; height: 36%">
+        <table id="workshopList"></table>
+      </div>
+
+      <div style="position: absolute; bottom: 2px; width: 100%; text-align: center">
+        <a href="tel:6042402272" data-rel="external">Need Help? Contact Us</a>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-dialog id="flTyre">
+    <div id="tyreOptionFL"></div>
+    <div class="tyreDialog">
+      <button class="button button--material tyreButton" id="flTyreData" onclick="GetTyreIssue('flTyre')">Save</button>
+    </div>
+  </ons-dialog>
+
+  <ons-dialog id="frTyre">
+    <div id="tyreOptionFR"></div>
+    <div class="tyreDialog">
+      <button class="button button--material tyreButton" id="frTyreData" onclick="GetTyreIssue('frTyre')">Save</button>
+    </div>
+  </ons-dialog>
+
+  <ons-dialog id="rlTyre">
+    <div id="tyreOptionRL"></div>
+    <div class="tyreDialog">
+      <button class="button button--material tyreButton" id="rlTyreData" onclick="GetTyreIssue('rlTyre')">Save</button>
+    </div>
+  </ons-dialog>
+
+  <ons-dialog id="rrTyre">
+    <div id="tyreOptionRR"></div>
+    <div class="tyreDialog">
+      <button class="button button--material tyreButton" id="rrTyreData" onclick="GetTyreIssue('rrTyre')">Save</button>
+    </div>
+  </ons-dialog>
+
+  <ons-dialog id="getPartnerResponse">
+    <div id="partnerResponse"></div>
+  </ons-dialog>
+
+  <ons-dialog id="agreement">
+    <div id="paymentAgreement"></div>
+  </ons-dialog>
+
+  <ons-dialog id="qrReturn">
+    <div id="qrData"></div>
+  </ons-dialog>
+
+  <ons-template id="battBreakdown.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Select the nearest workshop
+        </div>
+      </ons-toolbar>
+
+
+    </ons-page>
+  </ons-template>
+
+  <!--  <ons-template id="schedule.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          My Schedule
+        </div>
+      </ons-toolbar>
+
+    </ons-page>
+  </ons-template>-->
+
+  <ons-template id="credit.html">
+    <ons-page id="rideCredit-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          E-Voucher
+        </div>
+      </ons-toolbar>
+
+      <!--  <label>Your Voucher: </label>
+      <label id="rideCredit"></label>-->
+
+      <!--  <table id="creditHeader">
+        <tr>
+          <th>Title</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </table>-->
+
+      <div style="overflow-y:auto; height: 85%; display:none">
+        <table id="creditTable"></table>
+      </div>
+
+      <div id="voucherList" style="margin: 3% 0"></div>
+
+      <div style="text-align:center">
+        <ons-button id="topUp-button">Purchase Voucher</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="topUp.html">
+    <ons-page id="topUp-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          E-Voucher
+        </div>
+      </ons-toolbar>
+
+      <div id="topUpWrapper"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="reward.html">
+    <ons-page id="rideReward-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Reward
+        </div>
+      </ons-toolbar>
+
+      <label>Your ride Point: </label>
+      <label id="ridePoint"></label>
+
+      <div style="overflow-y:auto; height: 85%">
+        <table id="rewardTable"></table>
+      </div>
+
+      <div style="text-align:center">
+        <ons-button id="redeem-button">Redeem</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="redeem.html">
+    <ons-page id="redeem-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Redeem
+        </div>
+      </ons-toolbar>
+
+      <label>Available Point: </label>
+      <label id="redeemridePoint"></label>
+
+      <!--  <ons-tabbar position="bottom">
+
+        <ons-tab page="gift.html" label="GIFT" active></ons-tab>
+        <ons-tab page="service.html" label="SERVICE"></ons-tab>
+
+        <template id="gift.html"></template>
+        <template id="service.html"></template>
+
+      </ons-tabbar>-->
+
+      <!--  <ons-button onclick="fn.load('gift.html')">Gift</ons-button>
+      <ons-button onclick="fn.load('service.html')">Service</ons-button> -->
+
+      <!-- <ons-button onclick="RedeemGift()">Gift</ons-button>
+      <ons-button onclick="RedeemService()">Service</ons-button> -->
+
+      <div class="button-bar" style="width:280px;">
+        <div class="button-bar__item">
+          <button class="button-bar__button" onclick="RedeemGift()">Gift</button>
+        </div>
+        <div class="button-bar__item">
+          <button class="button-bar__button" onclick="RedeemService()">Service</button>
+        </div>
+      </div>
+
+      <div id="giftPage">
+        <label>Sort By: </label>
+        <select id="giftSort">
+          <option value="1" selected>Price Low to High</option>
+          <option value="2">Price High to Low</option>
+          <option value="3">Rating Low to High</option>
+          <option value="4">Rating High to Low</option>
+        </select>
+        <table>
+          <tr>
+            <th>Item Name</th>
+            <th>Point</th>
+          </tr>
+          <tr>
+            <td>Android</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>iPhone</td>
+            <td>20</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="servicePage">
+        <label>Sort By: </label>
+        <select id="serviceSort">
+          <option value="1" selected>Price Low to High</option>
+          <option value="2">Price High to Low</option>
+          <option value="3">Rating Low to High</option>
+          <option value="4">Rating High to Low</option>
+        </select>
+        <table>
+          <tr>
+            <th>Item Name</th>
+            <th>Point</th>
+          </tr>
+          <tr>
+            <td>Service A</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Service B</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Service C</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Service D</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Service E</td>
+            <td>33</td>
+          </tr>
+          <tr>
+            <td>Service F</td>
+            <td>41</td>
+          </tr>
+        </table>
+      </div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="cart.html">
+    <ons-page id="cart-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Shopping Cart
+        </div>
+      </ons-toolbar>
+
+      <!--  <div id="cartWrapper"></div>-->
+
+      <div id="purchase_page_7_1" style="min-height: 45%; max-height: 45%; overflow-y:scroll"></div>
+      <div id="purchase_page_7_2"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="payment.html">
+    <ons-page id="payment-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Payment
+        </div>
+      </ons-toolbar>
+
+      <div id="paymentWrapper"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="partnerLocation.html">
+    <ons-page id="partnerLocation-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center ">
+          Partner Location
+        </div>
+      </ons-toolbar>
+
+      <div id="partnerMap" style="border-radius: 20px; border: 1px solid #ffdd00; width:90%;height:90%; margin: 5% auto"></div>
+
+      <div id="partnerLocWrapper"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="qrResult.html">
+    <ons-page id="qrResult-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center ">
+          Work In Progress
+        </div>
+      </ons-toolbar>
+
+      <div id="qrResultWrapper"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="checklist.html">
+    <ons-page id="checklist-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Checklist
+        </div>
+      </ons-toolbar>
+
+      <div id="checklistTop"></div>
+      <table id="checklistWrapper"></table>
+      <div id="checklistButtons"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="rating.html">
+    <ons-page id="rating-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+      </ons-toolbar>
+
+      <div id="ratingWrapper"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="molpay.html">
+    <ons-page id="molpay-page">
+      <!--  <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+      </ons-toolbar>-->
+      <div class="app" id="molpayWrapper">
+        <div style="background-color: #72529b; text-align: right; position: fixed; float: left; width: 100%; height: 44px; z-index: 10">
+          <button style="border: 0px; color: #FFFFFF; background-color: transparent; margin: 15px" onclick="window.molpay.closeMolpay();fn.pop()">Close</button>
+        </div>
+        <div id="molpay" class="molpay" style="position: absolute; top: 44px; bottom: 0px"></div>
+      </div>
+      <div id="callback" style="margin-top:0%"></div>
+    </ons-page>
+  </ons-template>
+
+  <ons-modal direction="up">
+    <div id="modalContainer" style="text-align:center">
+    </div>
+  </ons-modal>
+
+  <ons-template id="terms.html">
+    <ons-page id="terms-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Terms & Conditions
+        </div>
+      </ons-toolbar>
+
+      <div id="termsContainer"></div>
+
+      <div style="margin: 2% 0; text-align:center">
+        <label class="checkbox">
+          <input type="checkbox" class="checkbox__input" name="agree"></input>
+          <div class="checkbox__checkmark"></div>
+          I Agree to the terms and conditions
+        </label>
+      </div>
+
+      <div style="text-align:center">
+        <button class="button button--material" id="terms-button" onclick="verifyTerms()">Next</button>
+      </div>
+
+    </ons-page>
+  </ons-template>
+
+  <!--Automall-->
+  <ons-template id="automall.html">
+    <ons-page id="automall-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="prev()">
+            <ons-icon icon="md-chevron-left"></ons-icon>
+          </ons-toolbar-button>
+          <!-- <ons-back-button></ons-back-button>-->
+        </div>
+        <div align=center class="center">Auto Mall</div>
+        <div class="right">
+          <!--  <ons-toolbar-button onclick="next()">
+            <ons-icon icon="md-chevron-right"></ons-icon>
+          </ons-toolbar-button>-->
+          <ons-toolbar-button onclick="fn.pop()">
+            <ons-icon icon="ion-close-round"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+
+      <ons-carousel fullscreen auto-scroll overscrollable id="carousel">
+        <ons-carousel-item id="contenta" style="overflow:scroll;background-color: transparent">
+          <div id="purchase_page_1"></div>
+        </ons-carousel-item>
+
+        <ons-carousel-item style="background-color: transparent; overflow: scroll">
+          <div id="purchase_page_2"></div>
+        </ons-carousel-item>
+        <ons-carousel-item style="overflow:scroll;">
+          <div class="segment" style="width:90%;margin-left:5%; margin-top:2px; margin-bottom:5px">
+            <div class="segment__items" onclick="page3_ctr('1')">
+              <input type="radio" class="segment__inputs" name="navi-segment-a" checked>
+              <div align=center class="segment__buttons">Favorite Workshop</div>
+            </div>
+
+            <div class="segment__items" onclick="page3_ctr('2')">
+              <input type="radio" class="segment__inputs" name="navi-segment-a">
+              <div align=center class="segment__buttons">New Location</div>
+            </div>
+
+            <div class="segment__items" onclick="page3_ctr('3')">
+              <input type="radio" class="segment__inputs" name="navi-segment-a">
+              <div align=center class="segment__buttons">All Workshop</div>
+            </div>
+          </div>
+          <div id="purchase_page_3"></div>
+        </ons-carousel-item>
+        <ons-carousel-item style="overflow: scroll">
+
+          <div style="width:95%; margin: 2% auto">
+            <div class="segments" style="width: 100%">
+              <div class="segment__items" onclick="page4_ctr('D')">
+                <input type="radio" class="segment__inputs" name="navi-segment-a">
+                <div align=center class="segment__buttons">Default</div>
+              </div>
+
+              <div class="segment__items" onclick="page4_ctr('A')">
+                <input type="radio" class="segment__inputs" name="navi-segment-a">
+                <div align=center class="segment__buttons">All</div>
+              </div>
+
+              <div class="segment__items" onclick="page4_ctr('AP')">
+                <input type="radio" class="segment__inputs" name="navi-segment-a">
+                <div align=center class="segment__buttons">Additional</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="purchase_page_4" style="height: 80%; overflow-y: scroll"></div>
+
+          <div style="width:99%; overflow-x:scroll">
+            <div style="width:120%">
+              <img src="http://www.website.com/link/icon/automall/tyre_icon.png" id="tyre_icon" onclick="page4_ctr('47102')">
+
+              <img src="http://www.website.com/link/icon/automall/battery_icon.png" id="battery_icon" onclick="page4_ctr('47101')">
+
+              <img src="http://www.website.com/link/icon/automall/service_icon.png" id="service_icon" onclick="page4_ctr('47103')">
+
+              <!--  <img src="http://www.website.com/link/icon/automall/Car Wash_Icon.png" style="max-width:15%; max-height:60%; margin:0 2%" onclick="page4_ctr('47106')">-->
+
+              <!--   <button class="w3-button w3-red" onclick = "page4_ctr('47102')">Tyre</button>
+                 <button class="w3-button w3-red" onclick = "page4_ctr('47101')">Battery</button>
+                 <button class="w3-button w3-red" onclick = "page4_ctr('47103')">Car Service</button>
+                 <button class="w3-button w3-red">Car Wash</button>
+                 <button class="w3-button w3-red">Car Wash</button> -->
+            </div>
+          </div>
+
+        </ons-carousel-item>
+
+        <ons-carousel-item id="content2">
+          <div id="purchase_page_5"></div>
+        </ons-carousel-item>
+        <!--   <ons-carousel-item id="content2">
+            <div id="purchase_page_6"></div>
+          </ons-carousel-item> -->
+        <ons-carousel-item style="overflow: scroll">
+          <div id="purchase_page_7_1" style="height: 45%; overflow-y:scroll"></div>
+          <div id="purchase_page_7_2"></div>
+        </ons-carousel-item>
+
+      </ons-carousel>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="dialog.html">
+    <ons-dialog id="dialog-3">
+      <div style="text-align: center; padding: 10px;">
+
+        <p style="font-weight: bold">
+          Thank You for shopping with
+        </p>
+        <p style="font-weight: bold">
+          ride App
+        </p>
+        <p style="font-weight: bold">
+          Your item has been added to your cart.
+        </p>
+
+        <div style="text-align: center; width: 95%; margin: 0 auto">
+          <button class="button button--outline" style="border: none; background-color:#ffdd00; color:#000; width: 47.5%; font-size: 12px; font-weight:bold" onclick="hideAutomallDialog('S')">CONTINUE</button>
+          <button class="button button--outline" style="border: none; background-color:#ffdd00; color:#000; width: 47.5%; font-size: 12px; font-weight:bold" onclick="hideAutomallDialog('C')">CHECKOUT</button>
+        </div>
+      </div>
+    </ons-dialog>
+  </ons-template>
+
+  <ons-template id="coupon.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center" style="padding-bottom:3px">
+          <h3>My Coupon</h3>
+        </div>
+        <div class="right">
+          <div class="w3-xlarge " onclick="close_coupon_page()">
+            <i class="fa fa-close"></i>
+          </div>
+        </div>
+
+      </ons-toolbar>
+
+      <div class="content" id="coupon_page" style="text-align: center">
+
+
+      </div>
+    </ons-page>
+  </ons-template>
+  <!--End Automall-->
+
+
+  <!--Schedule-->
+
+  <ons-template id="schedule.html">
+    <ons-page id="schedule-page">
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="prevSchedule()">
+            <ons-icon icon="md-chevron-left"></ons-icon>
+          </ons-toolbar-button>
+          <!--<ons-back-button></ons-back-button>-->
+        </div>
+        <div align=center class="center">My Scheduler</div>
+        <div class="right">
+          <!--  <ons-toolbar-button onclick="nextSchedule()">
+            <ons-icon icon="md-chevron-right"></ons-icon>
+          </ons-toolbar-button>-->
+          <ons-toolbar-button onclick="fn.pop()">
+            <ons-icon icon="ion-close-round" onclick="clearInterval(refScheduler)"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+      <ons-carousel fullscreen auto-scroll overscrollable auto-scroll-ratio="0.2" id="carousel2">
+        <ons-carousel-item id="contenta" style="overflow-y: scroll">
+          <div id="scheduler_page"></div>
+        </ons-carousel-item>
+        <ons-carousel-item id="contenta" style="overflow-y: scroll">
+          <div id="scheduler_page2"></div>
+        </ons-carousel-item>
+        <ons-carousel-item id="contenta" style="overflow-y: scroll">
+          <div id="scheduler_page3"></div>
+        </ons-carousel-item>
+        <!--   <ons-carousel-item id="contenta" style="overflow:scroll">
+       <div class="w3-gray" id="scheduler_page4" style="height:90%;"></div>
+      </ons-carousel-item>  -->
+
+        <ons-carousel-item style="background-color: #373B44; overflow:scroll">
+
+          <div id="map" style="width:95% ; height : 50%; margin: 2% auto; border-radius: 5px; border : 1px solid #ffdd00">
+
+          </div>
+
+          <div id="disp_bkd3" style="width:95%; margin: 0 auto; color: white; overflow: scroll">
+
+          </div>
+        </ons-carousel-item>
+        <ons-carousel-item id="contenta" style="overflow:scroll">
+          <div id="scheduler_page5" style="height:90%"></div>
+        </ons-carousel-item>
+      </ons-carousel>
+
+
+    </ons-page>
+  </ons-template>
+
+  <ons-dialog id="dialog-1">
+    <div style="text-align: center; padding: 10px;">
+      <p>
+        <div id="dialogs"></div>
+        <p>
+
+          <p>
+            <ons-button onclick="hideDialog('dialog-1')">Close</ons-button>
+          </p>
+    </div>
+  </ons-dialog>
+  <!--End schedule-->
+
+  <!-- Month Page -->
+
+  <ons-template id="day_page.html">
+    <ons-page id="day_page">
+      <ons-toolbar style="background-color: #373B44;overflow:scroll">
+        <div class="center">Select Day</div>
+
+      </ons-toolbar>
+
+      <div id="calendar_day_display"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <!-- Hour Page -->
+
+  <ons-template id="hour_page.html">
+    <ons-page id="hour_page">
+      <ons-toolbar style="background-color: #373B44;overflow:scroll">
+        <div class="center">Select Hour</div>
+      </ons-toolbar>
+
+      <div id="calendar_hour_display"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <!-- user Acknowledge item comment Page -->
+
+  <ons-template id="ack_page.html">
+    <ons-page id="acknowledgement-page">
+      <ons-toolbar>
+        <div class="center">Acknowledgement</div>
+      </ons-toolbar>
+
+      <div id="ack_display"></div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="startup.html">
+    <ons-page id="ride_reward" style="width:100%; height:100%">
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+          Reward
+        </div>
+      </ons-toolbar>
+
+      <!--<div style="text-align: center; margin-top: 30px">
+        <ons-if platform="android">
+          <ons-icon icon="md-android" size="30px" style="color: #A5C83A"></ons-icon>
+          <span style="color:#ffffff"> This is Android</span>
+         
+        </ons-if>
+    
+        <ons-if platform="ios other">
+          <ons-icon icon="md-apple" size="30px" style="color: #9E9D9D"></ons-icon>
+          <span style="color:#ffffff">This is iOS</span>
+        </ons-if>
+    </div>-->
+
+
+      <!--  <ons-pull-hook id="pull-hook"><span style="color:#ffffff">Pull to refresh</span>-->
+
+      <div id="qrcode" style="text-align:center; margin:0 auto;padding-top:20px; padding-bottom:10px">
+        <img src="img/gift.png" alt="GIFT" style="width:60%;height:60%">
+
+      </div>
+      <div id="ride_point" style="text-align:center;">
+        <label><span style="color:#ffdd00; font-size:14px">YOUR</span><span style="color:#ffffff;  font-size:14px"> ride POINT : </span><span id="tx_ridepoint" style="color:#ffdd00; font-size:14px">100</span></label>
+      </div>
+
+      <div class="segment" id="reward_div" style="height: 35px ; width: 100%; margin-top:10px ;  ">
+
+        <button class="segment__item" id="btn_gift" onclick=visibleGift()>
+            <input type="radio" class="segment__input" name="segment-a" checked>
+            <div class="segment__button" id="header_gift">GIFT</div>
+          </button>
+
+        <button class="segment__item" id="btn_voucher" onclick=visibleVoucher()>
+            <input type="radio" class="segment__input" name="segment-a">
+            <div class="segment__button" id="header_voucher">VOUCHER</div>
+          </button>
+
+      </div>
+
+      <div id="div_gift" style="margin-top:10px;">
+        <table id="table_gift" style="width:100% ;"></table>
+      </div>
+
+      <div id="div_voucher" style="margin-top:10px;" hidden>
+        <table id="table_voucher" style="width:100% ;"></table>
+      </div>
+
+      <!--</ons-pull-hook>-->
+
+    </ons-page>
+  </ons-template>
+
+</body>
+
+</html>

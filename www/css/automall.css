@@ -1,0 +1,924 @@
+/* login css -start- */
+
+#page .page__background {
+  background-image: url("../img/backgroundcopy.png");
+  background-repeat: no-repeat;
+}
+
+#transparent1.list,
+#transparent2.list,
+#transparent3.list {
+  background-color: transparent;
+}
+
+#transparent2.list {
+  margin-top: 40px;
+}
+
+#contenta,
+#contentb,
+#contentc {
+  background-image: url("/images/background.png");
+}
+
+#selectcartitle {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: "Century Gothic";
+}
+
+#toolbar {
+  background: #4b546b;
+}
+
+#selectcar_header {
+  background-image: url("http://www.samplelink.com/ride_sharing_22/Text box-01.jpg");
+  background-size: 100%;
+  color: black;
+  font-weight: bold;
+  font-family: Century Gothic;
+  padding: 0;
+  font-size: 18px;
+}
+
+#selectcar_item .list {
+  background-color: red;
+  font-family: Century Gothic;
+}
+
+.list-header__title {
+  font-weight: bold;
+  color: black;
+  font-size: 16px;
+}
+
+#carimage {
+  width: 100%;
+}
+
+#contentbackground {
+  background-color: white;
+}
+
+
+/*#carimage1 {
+  background: white;
+}*/
+
+#yesnobtncontent {
+  text-align: center;
+}
+
+#headercartitle {
+  /* style="background-image: url(http://www.website.com/link/icon/automall/Gradient Bar.png)"*/
+  background-image: url("http://www.website.com/link/icon/automall/Gradient_Bar.png");
+  background-color: #ffdd00;
+  color: #000;
+  /*background: linear-gradient(to right, #ffdd00, #fffb8a);*/
+  /* background-size:100%;*/
+  padding-top: 5px;
+}
+
+#carpltitle {
+  color: white;
+}
+
+#card2 {
+  background-color: transparent;
+  margin-top: 27px;
+}
+
+#card1 {
+  background-color: transparent;
+  margin-top: 27px;
+}
+
+#locationtitle {
+  color: black;
+  font-family: Century Gothic;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 50px;
+}
+
+
+/*#card_header {
+  font-size: 17px;
+  background: #343d46;
+  color: white;
+  font-family: Century Gothic;
+}*/
+
+.title {
+  font-size: 18px;
+  font-family: Century Gothic;
+}
+
+
+/*#no_btn {
+  color: #ffdd00;
+  border: 2px solid #ffdd00;
+}*/
+
+
+/*#yes_btn {
+  font-size: 12px;
+  width: 150px;
+  height: 30px;
+  padding-bottom: 10px;
+  color: #FEBC11;
+  background-color: transparent;
+  border: 2px solid #FEBC11;
+}*/
+
+
+/*#details_left {
+  font-size: 15px;
+  font-family: Century Gothic;
+}*/
+
+
+/*#details_right {
+  color: red;
+  font-size: 15px;
+  font-family: Century Gothic;
+}*/
+
+#contentc {
+  text-align: center;
+  color: white;
+  font-family: Century Gothic;
+}
+
+#workshopcontent {
+  padding-top: 70px;
+}
+
+#ctbtn {
+  padding-top: 110px;
+}
+
+#locationcheckcontent {
+  padding-top: 50px;
+}
+
+#locationcheckcontent {
+  background-color: transparent;
+}
+
+#workshops_input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  color: black;
+  font-family: Century Gothic;
+  text-align: left;
+}
+
+#locations_input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  color: black;
+  font-family: Century Gothic;
+  text-align: left;
+}
+
+#map {
+  width: 100%;
+  height: 250px;
+  background: grey;
+}
+
+#location_workshopcontent {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#continuecontent {
+  padding-top: 5px;
+}
+
+#Continue_btn {
+  width: 100%;
+  color: #FEBC11;
+  background-color: transparent;
+  border: 2px solid #FEBC11;
+}
+
+#workshop {
+  padding: 0;
+  color: black;
+}
+
+#locationcheck {
+  padding: 0;
+  color: black;
+}
+
+
+/*Main page for purchase css*/
+
+#carousel {
+  width: 100%;
+  height: 100%;
+}
+
+#purchasetitle {
+  background: #4E546B;
+  text-align: center;
+  color: #FEBC11;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h1 {
+  color: black;
+}
+
+
+/*2nd listing page*/
+
+#content2,
+#content4,
+#content5,
+#content6 {
+  overflow-y: auto;
+}
+
+#thumbnail {
+  width: 50px;
+  height: 50px;
+}
+
+#content6.list {
+  background-color: transparent;
+  height: 50%;
+}
+
+.brand {
+  color: black;
+}
+
+#right {
+  display: block;
+}
+
+#pricetag {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/*Star rating css*/
+
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 100px;
+  position: relative;
+  display: block;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+}
+
+.star-ratings-css-top {
+  color: #e7711b;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 44%;
+  margin: 0;
+}
+
+.star-ratings-css-bottom {
+  padding: 0;
+  z-index: 0;
+}
+
+#distance {
+  color: red;
+}
+
+
+/*End star rating css*/
+
+
+/*End*/
+
+
+/*item description css*/
+
+#itemimage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#contentimage {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#tyrewidth {
+  color: black;
+  margin: 0;
+}
+
+#describe {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+#Tyretitle {
+  margin: 0;
+  color: white;
+}
+
+#tyrecost {
+  color: white;
+  display: inline;
+}
+
+#addcncbtn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#displaycontent {
+  margin-top: 10px;
+}
+
+#addcartbtn,
+#addcartbtn1 {
+  color: #FEBC11;
+  background-color: transparent;
+  border: 2px solid #FEBC11;
+  float: right;
+}
+
+#cnclbtn,
+#cnclbtn1 {
+  color: #FEBC11;
+  background-color: transparent;
+  border: 2px solid #FEBC11;
+}
+
+#quantity {
+  color: white;
+  display: inline;
+}
+
+#qtycontent {
+  display: inline;
+  float: right;
+}
+
+#TextBox {
+  width: 50px;
+  text-align: center;
+}
+
+#TextBox1 {
+  width: 20px;
+  text-align: center;
+  border: none;
+}
+
+#Total__Amount {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  display: inline-block;
+}
+
+#Total__Amount1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: red;
+  float: right;
+}
+
+#Total__Amount2 {
+  display: inline-block;
+  color: black;
+}
+
+
+/*End Item Description*/
+
+
+/*Tyre Service Css*/
+
+#additionalservice {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#brandtile {
+  background-image: url("http://www.samplelink.com/ride_sharing_22/Text box-01.jpg");
+}
+
+#title1,
+#title2,
+#title3,
+#title4 {
+  background-image: url("http://www.samplelink.com/ride_sharing_22/Text box-01.jpg");
+  color: black;
+  font-weight: bold;
+  background-size: 100%;
+  line-height: 10px;
+  padding-top: 7px;
+  font-size: 16px;
+}
+
+#contentscroll {
+  background-color: transparent;
+  margin-top: 30px;
+}
+
+#tyrealligncost,
+#tyrebalancecost,
+#tyrerotationcost,
+#tyrepatchingcost {
+  color: white;
+}
+
+#tyreallign {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+}
+
+#tyrebalance {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+}
+
+#tyrerotation {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+}
+
+#tyrepatching {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+}
+
+#check-1,
+#check-2,
+#check-3,
+#check-4 {
+  height: 22px;
+  width: 22px;
+  margin-left: 10px;
+}
+
+#check-1 .checkbox--material__checkmark,
+#check-2 .checkbox--material__checkmark,
+#check-3 .checkbox--material__checkmark,
+#check-4 .checkbox--material__checkmark {
+  height: 22px;
+  width: 22px;
+  margin-left: 0px;
+}
+
+#check-1 .checkbox--material__checkmark:before,
+#check-2 .checkbox--material__checkmark:before,
+#check-3 .checkbox--material__checkmark:before,
+#check-4 .checkbox--material__checkmark:before {
+  height: 25px;
+  width: 25px;
+  float: right;
+  border-radius: 9px;
+  background-color: #FEBC11;
+}
+
+#check-1 :checked+.checkbox--material__checkmark:before,
+#check-2 :checked+.checkbox--material__checkmark:before,
+#check-3 :checked+.checkbox--material__checkmark:before,
+#check-4 :checked+.checkbox--material__checkmark:before {
+  border: 2px solid #FEBC11;
+  background-color: #FEBC11;
+}
+
+#check-1 :checked+.checkbox--material__checkmark:after,
+#check-2 :checked+.checkbox--material__checkmark:after,
+#check-3 :checked+.checkbox--material__checkmark:after,
+#check-4 :checked+.checkbox--material__checkmark:after {
+  width: 14px;
+  height: 8px;
+}
+
+#check-1 .checkbox--material__input,
+#check-2 .checkbox--material__input,
+#check-3 .checkbox--material__input,
+#check-4 .checkbox--material__input {
+  top: 1px;
+  left: 0px;
+}
+
+
+/*End tyre service*/
+
+
+/*cart info css*/
+
+#carttitle {
+  color: white;
+  text-align: center;
+  padding: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#quantitynum {
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+#removecontent {}
+
+#removebutton {
+  /*  border:2px solid red;
+    border-radius:10px;
+    background-color:red;*/
+  color: gray;
+  border: none;
+}
+
+#removebutton:hover {
+  opacity: 0.6;
+}
+
+#qtytitle,
+#pictitle {
+  margin-bottom: 2px;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#qtytitle {
+  margin-right: 55px;
+}
+
+#destitle {
+  color: black;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+#totalcost,
+#pointtitle,
+#subcost {
+  padding: 0px;
+  color: white;
+  margin: 0;
+  font-size: 17px;
+}
+
+#paidcost,
+#points {
+  padding: 0px;
+  color: white;
+  margin: 0;
+  font-size: 17px;
+}
+
+#listitemcontent {
+  background-image: url("http://www.samplelink.com/ride_sharing_22/Text box-01.jpg");
+  background-size: 100%;
+}
+
+#discountinput {
+  width: 55px;
+  color: black;
+  margin: 0;
+  padding: 0 0 0 0;
+  white-space: nowrap;
+}
+
+#grandcost {
+  padding: 17px;
+  color: red;
+  font-size: 17px;
+}
+
+#grandcontent {
+  background: linear-gradient(to right, #d3d3d3, #FFFFFF);
+  text-align: center;
+  margin-top: 20px;
+}
+
+#couponbtn {
+  font-size: 12px;
+  margin-left: 5px;
+  padding: 2px;
+  float: right;
+  min-height: 12px;
+  line-height: 12px;
+  color: #FEBC11;
+  background-color: transparent;
+  border: 2px solid #FEBC11;
+}
+
+#brantitle,
+#numtitle,
+#prodtitle {
+  color: white;
+}
+
+#totalcost {
+  font-weight: bold;
+}
+
+.pointandcost,
+.total_amount {
+  display: inline-block;
+}
+
+.total_amount {
+  float: right;
+  margin-right: 10px;
+}
+
+#paidcost {
+  color: orange;
+}
+
+
+/* End of cart service */
+
+
+/*Purchase css*/
+
+.btncontent {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#backbtn {
+  float: left;
+  color: #FEBC11;
+  background-color: transparent;
+  border: 2px solid #FEBC11;
+}
+
+#paybuttn {
+  float: right;
+  color: #FEBC11;
+  background-color: transparent;
+  border: 2px solid #FEBC11;
+}
+
+.list-item--material__thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.segments {
+  font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.segment__items {
+  font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.segment__inputs {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.segment__buttons {
+  font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  border-radius: 0;
+  background-color: transparent;
+  color: #ffdd00;
+  border: 1px solid #ffdd00;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 0;
+  font-weight: 600;
+  padding: 0;
+  font-size: 13px;
+  height: 29px;
+  line-height: 29px;
+  width: 100%;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear;
+  box-sizing: border-box;
+}
+
+.segment__items:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.segment__buttons:hover {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.segment__buttons:focus {
+  outline: 0;
+}
+
+:active+.segment__buttons {
+  background-color: rgba(205, 225, 248, 0.931);
+  border: 0 solid rgba(18, 114, 224, .77);
+  border-top: 1px solid rgba(18, 114, 224, .77);
+  border-bottom: 1px solid rgba(18, 114, 224, .77);
+  border-right: 1px solid rgba(18, 114, 224, .77);
+  font-size: 13px;
+  width: 100%;
+  -webkit-transition: none;
+  transition: none;
+}
+
+:checked+.segment__buttons {
+  background-color: #ffdd00;
+  color: black;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.segment__items:first-child>.segment__buttons {
+  border-left-width: 1px;
+  border-radius: 4px 0 0 4px;
+}
+
+.segment__items:last-child>.segment__buttons {
+  border-right-width: 1px;
+  border-radius: 0 4px 4px 0;
+}
+
+#scheduler_page .list-item__thumbnail {
+  max-width: 70px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+}
+
+#purchase_page_7_1 .list-item__thumbnail {
+  max-width: 70px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+}
+
+#tyre_icon {
+  max-width: 30%;
+  max-height: 90%;
+  margin: 1% 0;
+}
+
+#battery_icon {
+  max-width: 30%;
+  max-height: 90%;
+  margin: 1% 0;
+}
+
+#service_icon {
+  max-width: 30%;
+  max-height: 90%;
+  margin: 1% 0;
+}
+
+
+/**/
+
+
+/*Delen Automall*/
+
+.background-transparent {
+  background: transparent;
+}
+
+.btn-group button {
+  background-color: transparent;
+  border: 1px solid yellow;
+  /* Green border */
+  color: yellow;
+  /* White text */
+  cursor: pointer;
+  /* Pointer/hand icon */
+  border-top: 1px solid yellow;
+}
+
+.background-dark {
+  background: #484848;
+}
+
+.tabbar--top {
+  padding-top: 5px;
+  padding-left: 8px;
+  border-bottom: none;
+}
+
+.tabbar {
+  width: 96%;
+  background: transparent;
+}
+
+.page__background {
+  background-image: url("background.png");
+  background-size: 100% 100%;
+}
+
+.tabbar__button {
+  border-top-color: yellow !default;
+}
+
+.left {
+  background: transparent;
+}
+
+.borderbottom {
+  border-bottom: 1px solid #BFBFBF;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.cgnborder {
+  border-right: 1px solid #BFBFBF;
+  height: 100%;
+}
+
+.cgnmargin {
+  margin-bottom: 0;
+}
+
+.changep {
+  padding-top: 0;
+  padding-bottom:
+}
+
+.image {
+  text-align: center;
+}
